@@ -1,0 +1,18 @@
+# Source files
+src/
+test/
+
+# Config files
+*.config.ts
+tsconfig.json
+.oxfmtrc.json
+.oxlintrc.json
+
+# Development
+node_modules/
+.git/
+.gitignore
+
+# Lock files
+package-lock.json
+bun.lock

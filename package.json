@@ -16,28 +16,32 @@
     "author": "liry24",
     "repository": {
         "type": "git",
-        "url": "https://github.com/liry24/liry24.git"
+        "url": "git+https://github.com/liry24/liry24.git"
     },
     "bin": {
-        "liry24": "./dist/cli.js"
+        "liry24": "dist/cli.js"
     },
     "files": [
         "dist"
     ],
     "type": "module",
     "main": "dist/cli.js",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
     "scripts": {
         "build": "rolldown -c rolldown.config.ts",
         "dev": "rolldown -c rolldown.config.ts --watch",
         "test": "vitest",
         "test:ui": "vitest --ui",
         "test:run": "vitest run",
-        "prepublishOnly": "bun run build",
+        "prepublishOnly": "rolldown -c rolldown.config.ts",
         "lint": "oxlint",
         "lint:fix": "oxlint --fix",
         "fmt": "oxfmt",
         "fmt:check": "oxfmt --check",
-        "release": "npx bumpp"
+        "release": "bumpp"
     },
     "dependencies": {
         "cac": "6.7.14",
