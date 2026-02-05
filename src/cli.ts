@@ -13,7 +13,7 @@ cli.command('avatar', 'Download avatar image')
     .action(avatarCommand)
 
 cli.help()
-cli.version('1.0.4')
+cli.version('1.0.5')
 
 // If no arguments are provided, open the website
 if (process.argv.length === 2) {
