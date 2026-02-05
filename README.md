@@ -1,4 +1,4 @@
-# liry24
+# Liry24 CLI
 
 Personal CLI tool for Liry24
 

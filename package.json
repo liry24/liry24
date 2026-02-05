@@ -8,15 +8,15 @@
         "download",
         "liry24"
     ],
-    "homepage": "https://github.com/liry24/liry24#readme",
+    "homepage": "https://github.com/liry24/liry24-cli#readme",
     "bugs": {
-        "url": "https://github.com/liry24/liry24/issues"
+        "url": "https://github.com/liry24/liry24-cli/issues"
     },
     "license": "MIT",
     "author": "liry24",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/liry24/liry24.git"
+        "url": "git+https://github.com/liry24/liry24-cli.git"
     },
     "bin": {
         "liry24": "dist/cli.js"
