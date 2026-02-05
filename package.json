@@ -1,0 +1,47 @@
+{
+    "name": "liry24",
+    "version": "0.0.0",
+    "description": "Personal CLI tool for Liry24",
+    "license": "MIT",
+    "author": "liry24",
+    "bin": {
+        "liry24": "./dist/cli.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "type": "module",
+    "main": "dist/cli.js",
+    "scripts": {
+        "build": "rolldown -c rolldown.config.ts",
+        "dev": "rolldown -c rolldown.config.ts --watch",
+        "test": "vitest",
+        "test:ui": "vitest --ui",
+        "test:run": "vitest run",
+        "prepublishOnly": "bun run build",
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix",
+        "fmt": "oxfmt",
+        "fmt:check": "oxfmt --check",
+        "release": "npx bumpp"
+    },
+    "dependencies": {
+        "cac": "6.7.14",
+        "cli-progress": "3.12.0",
+        "consola": "3.4.2",
+        "ofetch": "1.5.1",
+        "pathe": "2.0.3"
+    },
+    "devDependencies": {
+        "@types/cli-progress": "3.11.6",
+        "@types/node": "25.2.0",
+        "@vitest/ui": "^4.0.18",
+        "bumpp": "10.4.0",
+        "oxfmt": "^0.27.0",
+        "oxlint": "^1.43.0",
+        "rolldown": "1.0.0-rc.3",
+        "taze": "^19.9.2",
+        "typescript": "5.9.3",
+        "vitest": "^4.0.18"
+    }
+}
