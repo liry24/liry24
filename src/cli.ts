@@ -1,6 +1,7 @@
 import cac from 'cac'
 
 import { avatarCommand } from './commands/avatar.js'
+import { openCommand } from './commands/open.js'
 
 const cli = cac('liry24')
 
@@ -12,6 +13,11 @@ cli.command('avatar', 'Download avatar image')
     .action(avatarCommand)
 
 cli.help()
-cli.version('1.0.2')
+cli.version('1.0.3')
 
-cli.parse()
+// If no arguments are provided, open the website
+if (process.argv.length === 2) {
+    openCommand()
+} else {
+    cli.parse()
+}
